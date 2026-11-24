@@ -14,6 +14,41 @@
       "id": "M-31",
       "text": "制片修订：秋蘅在新剪辑中改名为秋衡，表演者未变。",
       "kind": "edit-notice"
+    },
+    {
+      "id": "M-40",
+      "kind": "editing",
+      "text": "剪辑V1计划2026-11-01用于校内闭门讲座，片段涉及P4饰演C8、W2原片画面。V2改商业平台发布，仍用同样画面。"
+    },
+    {
+      "id": "M-41",
+      "kind": "rights-contact",
+      "text": "P4本人2026-10-20邮件：仅同意V1讲座片段，不包括训练素材或商业公开。W2作品素材版权另行确认。"
+    },
+    {
+      "id": "M-42",
+      "kind": "source-forward",
+      "text": "群聊M23转述的唯一出处为M41，没有第二份许可。"
+    },
+    {
+      "id": "M-43",
+      "kind": "identity",
+      "text": "C8更名秋衡仍由P4表演；新角色C9也叫秋蘅，由另一位P5表演，不能因同名合并。"
+    },
+    {
+      "id": "M-44",
+      "kind": "kinship-claim",
+      "text": "已故P6的联系人K1自称近亲属同意商业使用；K2提出异议，双方未提交关系证明。"
+    },
+    {
+      "id": "M-45",
+      "kind": "rights-contact",
+      "text": "W2制片人仅确认讲座引用，不确认新商业剪辑及训练使用。"
+    },
+    {
+      "id": "M-46",
+      "kind": "withdrawal",
+      "text": "编辑请求撤下已发商业V2；待发V3仍使用C8的新名和同一画面。"
     }
   ],
   "entities": [
@@ -33,5 +68,36 @@
       "type": "作品"
     }
   ],
-  "case_id": "media-17"
+  "case_id": "media-17",
+  "context": {
+    "editions": [
+      {
+        "id": "V1",
+        "purpose": "校内讲座",
+        "state": "delivered"
+      },
+      {
+        "id": "V2",
+        "purpose": "商业发布",
+        "state": "published"
+      },
+      {
+        "id": "V3",
+        "purpose": "商业发布",
+        "state": "pending"
+      }
+    ],
+    "publications": [
+      {
+        "id": "PUB2",
+        "edition": "V2",
+        "date": "2026-11-02",
+        "text": "秋蘅片段已发布",
+        "sources": [
+          "M-40",
+          "M-23"
+        ]
+      }
+    ]
+  }
 }
