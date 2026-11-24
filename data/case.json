@@ -1,0 +1,37 @@
+{
+  "records": [
+    {
+      "id": "M-17",
+      "text": "林岚饰演的秋蘅角色仅授权用于本校闭门讲座片段，不含商业短片。",
+      "kind": "permission-note"
+    },
+    {
+      "id": "M-23",
+      "text": "群聊转发：听说林老师同意了，制作方可以用她的脸。",
+      "kind": "forwarded-claim"
+    },
+    {
+      "id": "M-31",
+      "text": "制片修订：秋蘅在新剪辑中改名为秋衡，表演者未变。",
+      "kind": "edit-notice"
+    }
+  ],
+  "entities": [
+    {
+      "id": "P-4",
+      "name": "林岚",
+      "type": "表演者"
+    },
+    {
+      "id": "C-8",
+      "name": "秋蘅",
+      "type": "角色"
+    },
+    {
+      "id": "W-2",
+      "name": "雾桥",
+      "type": "作品"
+    }
+  ],
+  "case_id": "media-17"
+}
