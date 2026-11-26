@@ -1,0 +1,274 @@
+{
+  "case_id": "media-17-review-board",
+  "metadata": {
+    "notice": "本文件中的人物、机构、邮件、平台与事件均为合成演练文本，不对应真实主体或法律判断。"
+  },
+  "entities": [
+    {
+      "id": "P-4",
+      "name": "林岚",
+      "type": "表演者",
+      "labels": ["performer"]
+    },
+    {
+      "id": "C-8",
+      "name": "秋衡",
+      "type": "角色",
+      "aliases": ["秋蘅"]
+    },
+    {
+      "id": "W-2",
+      "name": "雾桥",
+      "type": "作品"
+    },
+    {
+      "id": "P-9",
+      "name": "沈砚",
+      "type": "表演者",
+      "labels": ["performer", "deceased"]
+    },
+    {
+      "id": "C-10",
+      "name": "远灯",
+      "type": "角色"
+    },
+    {
+      "id": "P-12",
+      "name": "周澄",
+      "type": "表演者",
+      "labels": ["performer"]
+    },
+    {
+      "id": "W-14",
+      "name": "潮信片刻",
+      "type": "作品"
+    },
+    {
+      "id": "W-15",
+      "name": "未完成的夏天",
+      "type": "作品",
+      "status": "removed"
+    }
+  ],
+  "records": [
+    {
+      "id": "M-17",
+      "text": "林岚饰演的秋蘅角色仅授权用于本校闭门讲座片段，不含商业短片。",
+      "kind": "permission-note"
+    },
+    {
+      "id": "M-23",
+      "text": "群聊转发：听说林老师同意了，制作方可以用她的脸。",
+      "kind": "forwarded-claim",
+      "refs": {"entity_ids": ["P-4"], "release_item_id": "I-1"}
+    },
+    {
+      "id": "M-31",
+      "text": "制片修订：秋蘅在新剪辑中改名为秋衡，表演者未变。",
+      "kind": "edit-notice"
+    },
+    {
+      "id": "M-41",
+      "text": "我是沈砚的配偶王敏，现提供亲属关系说明，但授权事项还需家庭内部确认。",
+      "kind": "contact-note"
+    },
+    {
+      "id": "M-42",
+      "text": "我是沈砚的女儿沈乐。关于纪念短片的邮件不是我发出的，请暂停使用相关表演。",
+      "kind": "objection-note"
+    },
+    {
+      "id": "M-60",
+      "text": "周澄本人签署合成影像发布授权，允许《潮信片刻》复核版及视频平台发布。",
+      "kind": "signed-permission"
+    }
+  ],
+  "relations": [
+    {
+      "id": "REL-W2-C8",
+      "kind": "character_in_work",
+      "from_id": "C-8",
+      "to_id": "W-2",
+      "status": "grounded",
+      "evidence_ids": ["M-31"],
+      "description": "编辑资料将秋衡/秋蘅与短片《雾桥》关联；名称修订不改变稳定编号。"
+    }
+  ],
+  "revisions": [
+    {
+      "id": "REV-C8-RENAME",
+      "kind": "rename",
+      "sequence": 1,
+      "entity_id": "C-8",
+      "old_value": "秋蘅",
+      "new_value": "秋衡",
+      "source_record_id": "M-31",
+      "note": "角色改名，稳定编号 C-8 与表演者关系不变。"
+    },
+    {
+      "id": "REV-W15-REMOVE",
+      "kind": "remove",
+      "sequence": 2,
+      "entity_id": "W-15",
+      "old_value": "active",
+      "new_value": "removed",
+      "source_record_id": "EDIT-W15",
+      "note": "编辑撤下作品；不删除待发内容、既有事项或发布历史。"
+    }
+  ],
+  "contacts": [
+    {
+      "id": "CT-1",
+      "person_id": "P-20",
+      "name": "王敏",
+      "represents_id": "P-9",
+      "relationship": "配偶",
+      "authority_status": "unverified",
+      "evidence_ids": ["M-41"]
+    },
+    {
+      "id": "CT-2",
+      "person_id": "P-21",
+      "name": "沈乐",
+      "represents_id": "P-9",
+      "relationship": "子女/女儿",
+      "authority_status": "unverified",
+      "evidence_ids": ["M-42"]
+    }
+  ],
+  "authorizations": [
+    {
+      "id": "A-TRAIN-ONLY",
+      "person_ids": ["P-12"],
+      "right_types": ["likeness", "performance"],
+      "scope": {
+        "purposes": ["training"],
+        "uses": ["synthetic_media", "training_material"]
+      },
+      "verification_status": "verified",
+      "evidence_ids": ["E-TRAIN-1"],
+      "note": "仅训练素材许可，不能作为发布许可。"
+    },
+    {
+      "id": "A-READY-ZHOU",
+      "person_ids": ["P-12"],
+      "work_ids": ["W-14"],
+      "right_types": ["likeness", "performance", "work_release", "synthetic_asset"],
+      "scope": {
+        "purposes": ["release"],
+        "channels": ["platform_review", "streaming"],
+        "uses": ["short_film", "synthetic_media"],
+        "territories": ["CN"]
+      },
+      "verification_status": "verified",
+      "evidence_ids": ["M-60", "E-SIGNED-60"]
+    }
+  ],
+  "release_items": [
+    {
+      "id": "I-1",
+      "title": "雾桥｜平台复核与商业展映版",
+      "revision": "draft-3",
+      "person_ids": ["P-4"],
+      "character_ids": ["C-8"],
+      "work_ids": ["W-2"],
+      "requested_scope": {
+        "purposes": ["release", "commercial"],
+        "channels": ["platform_review", "streaming"],
+        "uses": ["commercial_short", "short_film"],
+        "commercial": true
+      },
+      "note_record_ids": ["M-23"],
+      "notes": ["排期备注：已获同意，可直接放行。"]
+    },
+    {
+      "id": "I-2",
+      "title": "雾桥｜本校闭门讲座片段留档",
+      "revision": "draft-2",
+      "person_ids": ["P-4"],
+      "character_ids": ["C-8"],
+      "requested_scope": {
+        "purposes": ["education"],
+        "channels": ["school_closed_lecture"],
+        "uses": ["clip"]
+      }
+    },
+    {
+      "id": "I-3",
+      "title": "沈砚纪念短片｜流媒体版",
+      "revision": "draft-1",
+      "person_ids": ["P-9"],
+      "character_ids": ["C-10"],
+      "requested_scope": {
+        "purposes": ["release"],
+        "channels": ["streaming"],
+        "uses": ["short_film", "synthetic_media"]
+      }
+    },
+    {
+      "id": "I-4",
+      "title": "潮信片刻｜已核验授权复核版",
+      "revision": "draft-4",
+      "person_ids": ["P-12"],
+      "work_ids": ["W-14"],
+      "requested_scope": {
+        "purposes": ["release"],
+        "channels": ["platform_review", "streaming"],
+        "uses": ["short_film", "synthetic_media"],
+        "territories": ["CN"]
+      }
+    },
+    {
+      "id": "I-5",
+      "title": "夏季合集｜曾包含已撤下作品",
+      "revision": "draft-1",
+      "work_ids": ["W-15"],
+      "requested_scope": {
+        "purposes": ["release"],
+        "channels": ["platform_review"]
+      }
+    }
+  ],
+  "publications": [
+    {
+      "id": "PUB-9-OLD",
+      "item_id": "I-3",
+      "published_at": "2026-10-18",
+      "revision": "draft-0",
+      "channel": "internal_festival_page",
+      "sequence": 1,
+      "clearance_decision": "historical_record_only"
+    }
+  ],
+  "objections": [
+    {
+      "id": "OBJ-9-1",
+      "contact_id": "CT-2",
+      "person_id": "P-21",
+      "target_item_ids": ["I-3"],
+      "target_entity_ids": ["P-9", "C-10"],
+      "reason": "联系人称授权邮件并非本人/家庭真实意思，要求暂停后续发布。",
+      "record_id": "M-42",
+      "received_at": "2026-11-05",
+      "sequence": 2,
+      "status": "open"
+    }
+  ],
+  "matters": [
+    {
+      "id": "MAT-LEGACY-W15",
+      "title": "既有事项：核对《未完成的夏天》撤下前已交付平台的版本",
+      "kind": "distribution_history",
+      "status": "open",
+      "severity": "blocker",
+      "codes": ["WORK_REMOVED", "PLATFORM_VERSION_CHECK"],
+      "refs": {
+        "items": ["I-5"],
+        "entities": ["W-15"]
+      },
+      "notes": ["该事项在本次文本复核能力建立前已登记，不能因改名或撤下被删除。"]
+    }
+  ],
+  "similarity_score": 0.91,
+  "public_sentiment": "high_attention"
+}
